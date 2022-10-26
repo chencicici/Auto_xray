@@ -3,11 +3,15 @@
 
 
 # 使用
+自带 mac版的xray1.9.3,其他系统自行替换
+
 支持直接使用xray多线程批量扫描指定url列表文件和fofa语法寻找目标扫描需要配置fofa.py中的邮箱 key 搜索语法
 ![](https://raw.githubusercontent.com/chencicici/images/main/202210262249314.png)
 
 扫描完成后邮件提醒.需要配置my_email.py中的邮件地址和key
 ![](https://raw.githubusercontent.com/chencicici/images/main/202210262250753.png)
+
+
 ## 1.
 直接扫描url列表
 ```bash
