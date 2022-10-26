@@ -26,3 +26,6 @@ python3 Auto_xray -t 5 指定线程,默认10 -f urls.txt路径 -e True 开启邮
 
 更多详细参数 --help
 ![](https://raw.githubusercontent.com/chencicici/images/main/202210262248211.png)
+
+一些默认配置可以修改
+![](https://raw.githubusercontent.com/chencicici/images/main/202210262341074.png)
