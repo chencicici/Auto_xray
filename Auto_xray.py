@@ -20,11 +20,12 @@ import fofa
 
 
 def cmd(target_url):
-    save_name = target_url.replace('/', '')
+    save_name = target_url.replace('/', '').replace(':', '')  # 去掉特殊字符,windows的文件名问题
     shell = f'{args.xray} webscan --basic-crawler {target_url} --html-output {args.outpath}/{save_name}.html'
     os.system(shell)
     # print(shell)
     return
+
 
 # 调用xray扫描
 def xray_scan(url_queue):
@@ -98,7 +99,7 @@ if __name__ == "__main__":
     parser.add_argument('--filename', '-f', help='指定扫描url列表文件路径;非必选,默认为./urls.txt', default='./urls.txt')
     parser.add_argument('--outpath', '-o', help='指定输出路径;非必选,默认为./out', default='./out')
     parser.add_argument('--email', '-e', help='开启邮件推送 -e True;非必选,默认关闭,需填写my_email.py中的配置参数', default=False)
-    parser.add_argument('--fofa', '-ff',help='启用fofa批量收集域名 -ff True;非必选,默认关闭,需填写fofa.py中的配置参数',default=False)
+    parser.add_argument('--fofa', '-ff', help='启用fofa批量收集域名 -ff True;非必选,默认关闭,需填写fofa.py中的配置参数', default=False)
     args = parser.parse_args()
 
     # 2.判断启动功能
